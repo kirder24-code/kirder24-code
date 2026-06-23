@@ -14,7 +14,7 @@ I help solo SaaS founders and service businesses ship AI features that hold up i
 
 ### Writing
 
-- [Runcap vs Langfuse vs LiteLLM: which one actually stops a runaway AI agent?](https://dev.to/kirder24code/runcap-vs-langfuse-vs-litellm-which-one-actually-stops-a-runaway-ai-agent-2403) ([also on Hashnode](https://launchsolo-insights.hashnode.dev/runcap-vs-langfuse-vs-litellm-ai-cost-control))
+- [Runcap vs Langfuse vs LiteLLM: which one actually stops a runaway AI agent?](https://dev.to/kirder24code/runcap-vs-langfuse-vs-litellm-which-one-actually-stops-a-runaway-ai-agent-2403) (also on [Hashnode](https://launchsolo-insights.hashnode.dev/runcap-vs-langfuse-vs-litellm-ai-cost-control) and [Medium](https://medium.com/@kirder24/runcap-vs-langfuse-vs-litellm-which-actually-stops-a-runaway-ai-agent-a18fd1b790a3))
 
 ### Work with me
 
