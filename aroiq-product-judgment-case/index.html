@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AroIQ Product Judgment Case — Kirill Derhachenko</title>
+<style>
+body{font-family:Arial,Helvetica,sans-serif;max-width:920px;margin:0 auto;padding:40px 24px 70px;line-height:1.55;color:#18222c}
+h1{font-size:38px;line-height:1.08;margin:8px 0 12px}h2{margin-top:34px}
+.k{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:#68737d;font-weight:700}
+.lead{font-size:18px;color:#3a4652}.note{background:#f5f7f8;border:1px solid #dce2e6;border-radius:8px;padding:14px}
+.decision{border-left:5px solid #9b6a08;background:#fff9ed;padding:16px 18px;margin:20px 0}
+.flow{display:flex;flex-wrap:wrap;gap:8px}.flow span{border:1px solid #d6dde2;border-radius:7px;padding:9px 11px;font-size:13px;font-weight:700}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.card{border:1px solid #d6dde2;border-radius:8px;padding:15px}
+a{color:#17566b}@media(max-width:700px){.grid{grid-template-columns:1fr}h1{font-size:31px}}
+</style></head><body>
+<div class="k">Product judgment sample · synthetic data · public information only</div>
+<h1>When the numbers reconcile but I still would not ship</h1>
+<p class="lead">A small case I built after studying Arolytics' public Product Manager, AroIQ role. The goal is not to reproduce AroIQ. It is to show how I think about customer-data acceptance, traceability, uncertainty and human judgement.</p>
+<div class="note"><b>Candidate:</b> Kirill Derhachenko · Calgary, AB<br>No Arolytics or customer data was used. All facilities, tags, events, volumes and thresholds are synthetic.</div>
+
+<h2>The product question</h2>
+<p>Data Engineering can make a pipeline run and Data Science can make a model produce an output. Product still has to decide:</p>
+<p><b>Is this customer's data trustworthy enough to become product truth?</b></p>
+
+<h2>Flow of truth</h2>
+<div class="flow"><span>Customer SCADA</span><span>→</span><span>Semantic mapping</span><span>→</span><span>Model outputs</span><span>→</span><span>Event contract</span><span>→</span><span>Rollups</span><span>→</span><span>Operator view / export</span></div>
+
+<div class="decision">
+<h2 style="margin-top:0">Decision: REVIEW — do not accept yet</h2>
+<p>The historical reference events and rollups reconcile within the synthetic tolerance. But one SCADA tag mapping — <code>PILOT_A → flare_pilot_status</code> — is still awaiting operator confirmation.</p>
+<p><b>Why stop?</b> A numerically plausible result can still be semantically wrong if the source signal does not mean what we think it means.</p>
+</div>
+
+<h2>What I would resolve before ship</h2>
+<div class="grid">
+<div class="card"><b>Operator / customer SME</b><br>What physical state does the tag represent? Can it be stale, bypassed or inverted? Did instrumentation change during the reference period?</div>
+<div class="card"><b>Data Engineering</b><br>Is the mapping versioned and reproducible? How are late records and tag renames handled? Can mapping changes restate history?</div>
+<div class="card"><b>Data Science / emissions</b><br>Does the tag affect detection, causation, quantification or only context? How should unresolved semantics affect uncertainty?</div>
+<div class="card"><b>Product / Engineering</b><br>Which changes are release blockers? Can users see why a value changed? Are detection, causation and quantification confidence kept separate?</div>
+</div>
+
+<h2>Where AI helps — and where I stop it</h2>
+<p><b>Use AI for:</b> profiling exports, candidate mappings, anomaly detection, draft transforms, test generation, reference comparisons and difference summaries.</p>
+<p><b>Keep human-owned:</b> physical tag meaning, material exceptions, unresolved semantic uncertainty and final customer-data acceptance.</p>
+
+<h2>Why this case</h2>
+<p>Arolytics publicly describes this role as owning acceptance criteria, UAT, customer onboarding acceptance, data contracts, reference datasets, regression checks and the final judgement on what ships. I chose to demonstrate that judgement rather than create a UI mock-up or pretend to reproduce their emissions models.</p>
+
+<h2>Supporting evidence</h2>
+<ul>
+<li><a href="https://github.com/kirder24-code/kirder24-code/blob/main/aroiq-product-judgment-case/PRODUCT_JUDGMENT_CASE.md">Full product judgement case</a></li>
+<li><a href="https://github.com/kirder24-code/kirder24-code/blob/main/aroiq-product-judgment-case/EVIDENCE_AND_ASSUMPTIONS.md">Evidence vs. synthetic assumptions</a></li>
+<li><a href="https://github.com/kirder24-code/kirder24-code/blob/main/aroiq-product-judgment-case/INTERVIEW_EXPLANATION.md">How I would explain it in an interview</a></li>
+<li><a href="https://github.com/kirder24-code/kirder24-code/tree/main/aroiq-product-judgment-case">GitHub repository folder</a></li>
+</ul>
+</body></html>
