@@ -8,8 +8,9 @@ I help solo SaaS founders and service businesses ship AI features that hold up i
 - Free tools: [vibe-code audit checklist + follow-up ROI calculator](https://launchsoloai.com/tools)
 - Field notes: [launchsoloai.com/insights](https://launchsoloai.com/insights/)
 
-### What I build
+### Featured product work
 
+- **[AroIQ Product Judgment Case](https://github.com/kirder24-code/kirder24-code/tree/main/aroiq-product-judgment-case)** - synthetic customer-data acceptance case built from Arolytics' public Product Manager role. Demonstrates data-contract thinking, historical reconciliation, semantic tag-mapping risk, separate confidence signals, regression checks, and human-owned ship/no-ship judgement.
 - **[Runcap](https://github.com/kirder24-code/ai-agent-manager)** - free local CLI that estimates, hard-caps, and losslessly compresses the cost of AI coding agents. MIT, 100% local.
 
 ### Writing
