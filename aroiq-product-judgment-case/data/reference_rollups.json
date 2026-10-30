@@ -1,0 +1,7 @@
+{
+  "reference_version": "hist-accepted-v1",
+  "facility_totals_m3": {"NS-01": 2050.0,"NS-02": 1050.0,"NS-03": 700.0},
+  "portfolio_total_m3": 3800.0,
+  "demo_tolerance_pct": 3.0,
+  "note": "Synthetic demonstration tolerance; not an Arolytics threshold."
+}
