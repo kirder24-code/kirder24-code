@@ -1,0 +1,6 @@
+customer_id,facility_id,event_id,event_type,start_utc,end_utc,likely_cause,volume_estimate_m3,volume_low_m3,volume_high_m3,detection_confidence,causation_confidence,quantification_confidence,method_version,mapping_version,provenance_id
+northstar,NS-01,EV-001,blowdown,2026-01-12T10:00:00Z,2026-01-12T10:18:00Z,scheduled_depressurization,1240,1160,1325,0.98,0.94,0.91,method-4.2,map-v3,prov-001
+northstar,NS-01,EV-002,flare_event,2026-02-03T06:21:00Z,2026-02-03T06:53:00Z,pilot_loss,820,700,940,0.97,0.83,0.88,method-4.2,map-v3,prov-002
+northstar,NS-02,EV-003,tank_vent,2026-02-18T15:10:00Z,2026-02-18T15:29:00Z,process_upset,445,370,520,0.93,0.72,0.84,method-4.2,map-v3,prov-003
+northstar,NS-02,EV-004,blowdown,2026-03-07T19:02:00Z,2026-03-07T19:14:00Z,maintenance,605,555,660,0.99,0.91,0.93,method-4.2,map-v3,prov-004
+northstar,NS-03,EV-005,flare_event,2026-03-22T03:31:00Z,2026-03-22T03:58:00Z,unknown,710,570,860,0.91,0.49,0.81,method-4.2,map-v3,prov-005
