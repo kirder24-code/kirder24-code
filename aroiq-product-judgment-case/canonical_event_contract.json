@@ -1,0 +1,35 @@
+{
+  "contract_version": "demo-2.0",
+  "grain": "one row per model-produced emission/operational event per customer facility",
+  "note": "Synthetic demonstration only; not an AroIQ schema.",
+  "required_fields": [
+    "customer_id",
+    "facility_id",
+    "event_id",
+    "event_type",
+    "start_utc",
+    "end_utc",
+    "likely_cause",
+    "volume_estimate_m3",
+    "volume_low_m3",
+    "volume_high_m3",
+    "detection_confidence",
+    "causation_confidence",
+    "quantification_confidence",
+    "method_version",
+    "mapping_version",
+    "provenance_id"
+  ],
+  "semantic_rules": [
+    "event_id unique within customer",
+    "end_utc > start_utc",
+    "0 <= volume_low <= volume_estimate <= volume_high",
+    "confidence fields are independent values in [0,1]",
+    "method_version, mapping_version and provenance_id required"
+  ],
+  "decision_policy": {
+    "REJECT": ["contract/schema error","duplicate event id","invalid time window","invalid volume range","missing provenance/version"],
+    "REVIEW": ["unapproved tag mapping","unit transform not documented","confidence missing/out of bounds","historical reconciliation outside demo tolerance"],
+    "ACCEPT": "no blockers and no unresolved review items"
+  }
+}
