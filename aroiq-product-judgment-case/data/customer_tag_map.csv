@@ -1,0 +1,13 @@
+customer_id,facility_id,source_tag,canonical_semantic,source_unit,canonical_unit,transform,status,mapping_version,reviewed_by
+northstar,NS-01,PT_101,separator_pressure,kPa,kPa,direct,approved,map-v3,operator+Arolytics
+northstar,NS-01,FT_220,gas_flow,m3/h,m3/h,direct,approved,map-v3,operator+Arolytics
+northstar,NS-01,XV_12_POS,valve_state,percent,percent,direct,approved,map-v3,operator+Arolytics
+northstar,NS-01,FLARE_PILOT_OK,flare_pilot_status,bool,bool,direct,approved,map-v3,operator+Arolytics
+northstar,NS-02,PSEP_A,separator_pressure,psi,kPa,psi_to_kpa,approved,map-v3,operator+Arolytics
+northstar,NS-02,GAS_RATE_1,gas_flow,mscf/d,m3/h,documented_transform,approved,map-v3,operator+Arolytics
+northstar,NS-02,BDV_POS,valve_state,percent,percent,direct,approved,map-v3,operator+Arolytics
+northstar,NS-02,PILOT_STATE,flare_pilot_status,bool,bool,direct,approved,map-v3,operator+Arolytics
+northstar,NS-03,SEP_PRESS,separator_pressure,kPa,kPa,direct,approved,map-v3,operator+Arolytics
+northstar,NS-03,FLOW_MAIN,gas_flow,m3/h,m3/h,direct,approved,map-v3,operator+Arolytics
+northstar,NS-03,VALVE_X12,valve_state,percent,percent,direct,approved,map-v3,operator+Arolytics
+northstar,NS-03,PILOT_A,flare_pilot_status,bool,bool,direct,review,map-v3,operator review pending
