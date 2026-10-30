@@ -1,0 +1,6 @@
+customer_id,facility_id,reference_id,event_type,start_utc,end_utc,reference_volume_m3
+northstar,NS-01,REF-001,blowdown,2026-01-12T10:00:00Z,2026-01-12T10:18:00Z,1250
+northstar,NS-01,REF-002,flare_event,2026-02-03T06:21:00Z,2026-02-03T06:53:00Z,800
+northstar,NS-02,REF-003,tank_vent,2026-02-18T15:10:00Z,2026-02-18T15:29:00Z,450
+northstar,NS-02,REF-004,blowdown,2026-03-07T19:02:00Z,2026-03-07T19:14:00Z,600
+northstar,NS-03,REF-005,flare_event,2026-03-22T03:31:00Z,2026-03-22T03:58:00Z,700
